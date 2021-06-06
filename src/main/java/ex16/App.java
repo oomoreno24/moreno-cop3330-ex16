@@ -33,6 +33,17 @@ Instead of hard-coding the driving age in your program logic, research driving a
 
 public class App {
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("What is your age? ");
+        String ageInput = in.nextLine();
 
+        // convert input string to int
+        int age = Integer.parseInt(ageInput);
+
+        // ternary operator, condition, ? is true, : is false
+        String legalAge = (age>=16) ? "You are old enough to legally drive." : "You are not old enough to legally drive.";
+
+        // output
+        System.out.println(legalAge);
     }
 }
